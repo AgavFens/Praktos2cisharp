@@ -1,0 +1,48 @@
+﻿<Window x:Class="Praktos2cisharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktos2cisharp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="341*"/>
+            <RowDefinition Height="44*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="85*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" TextAlignment="Center">Название</TextBlock>
+                <TextBlock Grid.Row="2" TextAlignment="Center">Описание</TextBlock>
+                <TextBox x:Name="Nazvanie" Grid.Row="1" TextAlignment="Center"/>
+                <TextBox x:Name="Opisanie" Grid.Row="3" TextAlignment="Center"/>
+            </Grid>
+            <ListBox x:Name="Listovalka" Grid.Row="1" SelectionChanged="Listovalka_SelectionChanged"></ListBox>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Udalyalka" Grid.Column="0" Click="Udalyalka_Click">Удалить запись</Button>
+            <Button x:Name="Sozdavalka" Grid.Column="1" Click="Button_Click_Sozdavalka">Создать</Button>
+            <Button x:Name="Sohranyalka" Grid.Column="2" Click="Sohranyalka_Click">Сохранить</Button>
+        </Grid>
+        <DatePicker x:Name="DatePickerka" Grid.Row="0"/>
+    </Grid>
+</Window>
